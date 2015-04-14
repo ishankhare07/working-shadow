@@ -1,0 +1,6 @@
+.shadow {
+  font-size : 10em;
+  text-shadow : -10px -10px 20px;
+  text-margin : 5%;
+  display : block;
+}

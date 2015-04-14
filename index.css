@@ -1,6 +1,15 @@
+#first {
+    left: 100px;
+    top : 50px;
+    position: absolute;
+}
+
+#second{
+    left : 100px;
+    top: 200px;
+    position: absolute;
+}
+
 .shadow {
-  font-size : 10em;
-  text-shadow : -10px -10px 20px;
-  text-margin : 5%;
-  display : block;
+    font-size : 8em;
 }

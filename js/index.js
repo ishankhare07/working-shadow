@@ -16,7 +16,7 @@ function parse_letters(text) {
         var span = document.createElement('span');
         span.setAttribute("class","letter");
         span.appendChild(document.createTextNode(text[letter]));
-        span_list.push(div);
+        span_list.push(span);
     }
     return span_list;
 }
@@ -24,7 +24,7 @@ function parse_letters(text) {
 $(document).mousemove(function (event) {
     console.log("mouse moved");
     var letters = document.getElementsByClassName("letter");
-    for(var letter = 0 ; letter < letters.length < letter++) {
-        getShadow(letters[letter], event.pageX, event.pageY);
+    for(var letter = 0 ; letter < letters.length ; letter++) {
+        getShadow(letters[letter], event.pageX, event.pageY);       //call shadow-renderer to render shadows
     }
 })

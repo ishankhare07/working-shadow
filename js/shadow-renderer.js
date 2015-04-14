@@ -13,7 +13,7 @@ function getShadow(element, xPos, yPos) {
     var new_shh = h_scale * (xPos - current_left);
     var new_shv = v_scale * (yPos - current_top);
     
-    var distance = calculate_distance();                //determines the blur effect of shadow
+    var distance = calculate_distance(new_shh, new_shv);                //determines the blur effect of shadow
     console.log("new_shh : " + new_shh);
     console.log("new_shv : " + new_shv);
     console.log("distance : " + distance);
@@ -22,15 +22,15 @@ function getShadow(element, xPos, yPos) {
 }
 
 function calculate_distance(left, top) {
-    return Math.sqrt((
-        Math.pow(left, 2)
+    return Math.sqrt( 
+        (Math.pow(left, 2))
         +
-        Math.pow(top, 2)
-    ));
+        (Math.pow(top, 2))
+    );
 }
 
 function renderShadow(element, horizontal, vertical, blur) {
     //console.log("rendering element : " + element);
-    element.style.textShadow = String(horizontal) + "px " + String(vertical) + "px " + "0px";
+    element.style.textShadow = String(horizontal) + "px " + String(vertical) + "px " + String(blur) + "px";
     //console.log("rendered");
 }

@@ -22,7 +22,15 @@ function parse_letters(text) {
 }
 
 $(document).mousemove(function (event) {
-    console.log("mouse moved");
+    //console.log("mouse moved");
+    $('html').css({                                                 //setting the gradient dynamically
+        'height' : '100%',
+        'background' : "radial-gradient(circle 200px at " + 
+            String(parseInt(event.pageX)) + 
+            "px " +
+            String(parseInt(event.pageY)) +
+            "px, rgba(255,255,255,0), black)" 
+    });
     var letters = document.getElementsByClassName("letter");
     for(var letter = 0 ; letter < letters.length ; letter++) {
         getShadow(letters[letter], event.pageX, event.pageY);       //call shadow-renderer to render shadows

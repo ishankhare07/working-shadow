@@ -1,6 +1,6 @@
 function getShadow(element, xPos, yPos) {
-    var h_scale = -1/10;
-    var v_scale = -1/10;
+    var h_scale = -1/5;
+    var v_scale = -1/5;
     
     var element_bounds = element.getBoundingClientRect();
     var current_left = element_bounds.left;
@@ -13,7 +13,7 @@ function getShadow(element, xPos, yPos) {
     var new_shh = h_scale * (xPos - current_left);
     var new_shv = v_scale * (yPos - current_top);
     
-    var distance = calculate_distance(new_shh, new_shv);                //determines the blur effect of shadow
+    var distance = 0.5 * calculate_distance(new_shh, new_shv);                //determines the blur effect of shadow
     console.log("new_shh : " + new_shh);
     console.log("new_shv : " + new_shv);
     console.log("distance : " + distance);
